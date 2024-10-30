@@ -1,13 +1,11 @@
 import "./ExpenseItem.css";
-function ExpenseItem(props){
-    let month = props.date.getUTCMonth()+1;
-    let day = props.date.getUTCDate();
-    let year = props.date.getUTCFullYear();
-    let newDate = year +"/"+month+"/"+day;
+import ExpenseDate from "./ExpenseDate.jsx";
 
+function ExpenseItem(props){
     return (
         <div className="expense-item">
-            <div> {newDate} </div>
+            <div className = "expense-item_id">{props.is}</div>
+            <ExpenseDate date = {props.date}/>
             <div className="expense-item_description">
                 <h2>{props.title}</h2>
                 <div className="expense-item_ptice">{props.amount}</div>
