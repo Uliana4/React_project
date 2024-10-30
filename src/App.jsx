@@ -1,6 +1,6 @@
 import ExpenseItem from './components/ExpenseItem.jsx';
 import ExerciseComponent from './components/ExerciseComponent.jsx';
-import Product from './components./Product.jsx';
+import Product from './components/Product.jsx';
 import Expenses from "./components/Expenses.jsx";
 
 function App() {
