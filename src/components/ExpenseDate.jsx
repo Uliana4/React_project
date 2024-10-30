@@ -1,17 +1,12 @@
-//import "./ExpenseItem.css";
-
 function ExpenseDate(props){
-    const month = props.date.toLocaleString('pl-Pl', {timeZone: 'Europe/Warsaw', month: 'long'});
-    //let month = props.date.getUTCMonth()+1;
-    //let day = props.date.getUTCDate();
-    const day = props.date.toLocaleString('pl-Pl', {day:'2-digit'});
-    const year = props.date.getUTCFullYear();
-    //let newDate = year +"/"+month+"/"+day;
+    const day = props.date.toLocaleString('pl-PL', {timeZone: 'Europe/Warsaw', day: '2-digit'});
+    const month = props.date.toLocaleString('pl-PL', {month:'long'});
+    const year = props.date.getFullYear();
     return(
-        <div className = "expense-date">
-            <div className= "expense-date_day">{day}</div>
-            <div className= "expense-date_month">{month}</div>
-            <div className= "expense-date_year">{year}</div>
+        <div className="expense-date">
+                <div className="expense_date_day">{day}</div>
+                <div className="expense-date_month">{month}</div>
+                <div className="expense-date_year">{year}</div>
         </div>
     );
 }
